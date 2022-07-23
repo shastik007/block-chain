@@ -32,6 +32,20 @@ class BlockChain {
     newBlock.previousHash = this.getLatestBlock().hash
     this.chain.push(newBlock)
   }
+
+  isChainValid(){
+    for (let index = 1; index < this.chain.length; index++) {
+      const currentBlock = this.chain[index]
+      const previousBlock = this.chain[index - 1]
+      if (currentBlock.hash !== currentBlock.calculateHash()) {
+        return false
+      }  
+      if (currentBlock.hash !== previousBlock.hash) {
+        return false
+      }    
+    }
+    return true
+  }
 }
 
 const genCoin = new BlockChain()
