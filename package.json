@@ -1,0 +1,14 @@
+{
+  "name": "blockchain",
+  "version": "1.0.0",
+  "description": "blockchain",
+  "main": "main.js",
+  "scripts": {
+    "test": "run_test"
+  },
+  "author": "Abdullaev Jetigen",
+  "license": "ISC",
+  "dependencies": {
+    "crypto-js": "^4.1.1"
+  }
+}
